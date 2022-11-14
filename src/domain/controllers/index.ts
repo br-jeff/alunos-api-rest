@@ -1,7 +1,7 @@
 import { Controller, Get, Response } from "@decorators/express";
 
 @Controller("/")
-export class HelloWolrd {
+export default class HelloWolrd {
   constructor() {}
 
   @Get("/")
