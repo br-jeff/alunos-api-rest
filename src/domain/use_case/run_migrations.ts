@@ -1,12 +1,13 @@
-import knex from "knex";
-import databaseSettings from "~/src/infra/database/config/settings";
 import DatabaseMigrationSeed from "~/src/infra/database/database_migration_seed";
+import initializeDatabase from "~/src/infra/database/initialize_database";
 
-const knexConn = knex(databaseSettings);
+const knexConn = initializeDatabase();
 
-export async function migrations(): Promise<void> {
-  const databaseMigrationSeed = new DatabaseMigrationSeed(knexConn);
-  await databaseMigrationSeed.migrate();
-  await databaseMigrationSeed.seed();
-  await knexConn.destroy();
+export class DatabaseMigrations {
+  async execute() {
+    const databaseMigrationSeed = new DatabaseMigrationSeed(await knexConn);
+    await databaseMigrationSeed.migrate();
+    await databaseMigrationSeed.seed();
+    await knexConn.destroy();
+  }
 }

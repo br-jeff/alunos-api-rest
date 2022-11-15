@@ -1,14 +1,14 @@
 import { Controller, Get, Response } from "@decorators/express";
-import { migrations } from "~/src/domain/use_case/run_migrations";
+import { DatabaseMigrations } from "~/src/domain/use_case/run_migrations";
 
 @Controller("/migrations")
-export default class Migrations {
+export default class MigrationsController {
   constructor() {}
 
   @Get("/")
   async getData(@Response() res: any) {
     try {
-      await migrations();
+      await new DatabaseMigrations().execute();
       res.send("Migrations is runing");
     } catch (err) {
       console.error(err);
