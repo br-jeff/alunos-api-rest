@@ -45,9 +45,9 @@ export default {
     return process.env.DATABASE_FILE_NAME;
   },
   get DATABASE_DRIVER() {
-    if (!process.env.DATABASE_FILE_NAME) {
-      throw new Error("Env DATABASE_FILE_NAME not found");
+    if (!process.env.DATABASE_DRIVER) {
+      throw new Error("Env DATABASE_DRIVER not found");
     }
-    return process.env.DATABASE_FILE_NAME as "pg" | "sqlite3";
+    return process.env.DATABASE_DRIVER as "pg" | "sqlite3";
   },
 };
