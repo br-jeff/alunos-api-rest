@@ -18,6 +18,8 @@ services:
       DATABASE_NAME: dev
       DATABASE_PASSWORD: dev
       DATABASE_PORT: 5432
+      DATABASE_DRIVER: 'pg'
+      DATABASE_FILE_NAME: ''
     networks:
       - default
     depends_on:
