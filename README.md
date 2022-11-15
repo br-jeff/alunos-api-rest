@@ -1,5 +1,4 @@
-# wallet-backend API
-
+# Alunos API
 
 ## Run Project
 
@@ -7,9 +6,10 @@
     docker-compose up
 ```
 
-## Run migrations
+To Run migration and seed just acess route /migrations
 
-```
-docker-compose run --rm api npm run migrations
-
-```
+| Route | PATH        | Body | Param |     |
+| ----- | ----------- | ---- | ----- | --- |
+| GET   | /           |      |       |     |
+| GET   | /migrations |      |       |     |
+|       |             |      |       |     |
