@@ -5,7 +5,7 @@ export default class HelloWolrd {
   constructor() {}
 
   @Get("/")
-  getData(@Response() res: any) {
+  async getData(@Response() res: any) {
     res.send("Server is running");
   }
 }
