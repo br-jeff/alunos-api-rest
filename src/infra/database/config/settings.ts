@@ -3,10 +3,10 @@ import settings from "../../config/settings";
 const database = {
   client: settings.DATABASE_DRIVER,
   migrations: {
-    directory: "src/database/migrations",
+    directory: "src/infra/database/migrations",
   },
   seeds: {
-    directory: "src/database/seeds",
+    directory: "src/infra/database/seeds",
   },
   debug: settings.NODE_ENV === "dev",
 };

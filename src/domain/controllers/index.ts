@@ -6,6 +6,6 @@ export default class HelloWolrd {
 
   @Get("/")
   getData(@Response() res: any) {
-    res.send("Hello WOLRD DECORATOR");
+    res.send("Server is running");
   }
 }
