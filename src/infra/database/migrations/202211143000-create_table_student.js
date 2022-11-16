@@ -4,7 +4,7 @@ const tableName = "student";
 
 exports.up = function (knex) {
   return knex.schema.createTable(tableName, function (table) {
-    table.integer("id").primary();
+    table.increments("id").primary();
     table.string("name").notNullable();
     table.string("cpf").notNullable();
     table.integer("id_colegio").references("school.id").defaultTo(1);

@@ -4,7 +4,7 @@ const tableName = "school";
 
 exports.up = function (knex) {
   return knex.schema.createTable(tableName, function (table) {
-    table.integer("id").primary();
+    table.increments("id").primary();
     table.string("name").notNullable();
     table.string("street").notNullable();
     table.timestamp("created_at").notNullable().defaultTo(knex.fn.now());
