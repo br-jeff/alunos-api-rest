@@ -6,6 +6,6 @@ export default class IndexController {
 
   @Get("/")
   async getData(@Response() res: any) {
-    res.send("Server is running");
+    res.json({ status: "Server is running" });
   }
 }

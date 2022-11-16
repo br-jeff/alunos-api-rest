@@ -12,7 +12,7 @@ export default class MigrationsController {
       res.send("Migrations is runing");
     } catch (err) {
       console.error(err);
-      res.send("Error");
+      res.json({ error: err });
     }
   }
 }

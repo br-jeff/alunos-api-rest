@@ -27,8 +27,9 @@ const bodySchema = {
     id_colegio: { type: "integer" },
     id_turma: { type: "integer" },
     email: { type: "string" },
+    score: { type: "integer" },
   },
-  required: ["name", "cpf", "id_colegio", "id_turma", "email"],
+  required: ["name", "cpf", "id_colegio", "id_turma", "email", "score"],
 };
 
 const updateSchema = {
@@ -39,6 +40,7 @@ const updateSchema = {
     id_colegio: { type: "integer" },
     id_turma: { type: "integer" },
     email: { type: "string" },
+    score: { type: "integer" },
   },
 };
 

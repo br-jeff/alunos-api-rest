@@ -9,5 +9,5 @@ app.use(express.json());
 bootstrapControllers(app);
 
 app.listen(settings.PORT, () => {
-  console.log(`app listening on port ${settings.PORT}`);
+  console.log(`App listening on port ${settings.PORT}`);
 });
